@@ -29,7 +29,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           docker pull registry.k8s.io/ingress-nginx/controller:v1.4.0@sha256:34ee929b111ffc7aa426ffd409af44da48e5a0eea1eb2207994d9e0c0882d143
-          docker tag registry.k8s.io/ingress-nginx/controller:v1.4.0@sha256:34ee929b111ffc7aa426ffd409af44da48e5a0eea1eb2207994d9e0c0882d143 13help/registry.k8s.io:ingress-nginx-controller:v1.4.0
+          docker tag registry.k8s.io/ingress-nginx/controller:v1.4.0@sha256:34ee929b111ffc7aa426ffd409af44da48e5a0eea1eb2207994d9e0c0882d143 13help/registry.k8s.io:ingress-nginx-controller-v1.4.0
       
       - name: Log in to Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
@@ -40,4 +40,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Push to Docker Registry
         run: |
-          docker push 13help/registry.k8s.io:ingress-nginx-controller:v1.4.0
+          docker push 13help/registry.k8s.io:ingress-nginx-controller-v1.4.0
